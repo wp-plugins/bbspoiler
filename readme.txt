@@ -17,10 +17,10 @@ The plugin creates its own "Spoiler" button in the visual editor, but you can al
 [spoiler title='Title']Spoiler content[/spoiler]
 `
 
-Or
+or
 
 `
-[spoiler title='Title' collapse_link="no"]Spoiler content[/spoiler]
+[spoiler title='Title' collapse_link='no']Spoiler content[/spoiler]
 `
 
 
@@ -39,7 +39,7 @@ You can find the "Spoiler" plugin button in the visual editor.
 This spoiler code gives you three paragraphs of text:
 
 `
-[spoiler title='Title' collapse_link="true"]First Paragraph
+[spoiler title='Title' collapse_link='true']First Paragraph
 
 Second Paragraph
 
@@ -48,7 +48,8 @@ Third Paragraph[/spoiler]
 
 = Can I use spoilers within spoilers? =
 
-Yes, but only up to two levels. Use the number 2 in the shortcode. The code should look like this:
+Yes, but only up to two levels. Use the number 2 in the shortcode. 
+The code should look like this:
 
 `
 [spoiler title='Parent']
