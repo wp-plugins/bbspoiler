@@ -2,7 +2,7 @@
 Contributors: flector
 Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers
 Requires at least: 3.0
-Tested up to: 3.9.2
+Tested up to: 4.0
 Stable tag: 1.00
 
 This plugin allows you to hide text under the tags [spoiler]your text[/spoiler].
