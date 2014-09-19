@@ -1,7 +1,7 @@
 === BBSpoiler ===
 Contributors: flector
 Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers
-Requires at least: 3.0
+Requires at least: 3.9
 Tested up to: 4.0
 Stable tag: 1.00
 
