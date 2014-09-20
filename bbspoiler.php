@@ -3,7 +3,7 @@
 Plugin Name: BBSpoiler
 Plugin URI: http://wordpress.org/plugins/bbspoiler/
 Description: This plugin allows you to hide text under the tags [spoiler]your text[/spoiler].
-Version: 1.00
+Version: 1.01
 Author: Flector
 Author URI: http://wordpress.org/plugins/bbspoiler/
 */ 
@@ -120,6 +120,12 @@ function bbspoiler_add_tinymce_plugin( $plugin_array ) {
 function bbspoiler_add_tinymce_button( $buttons ) {
     array_push( $buttons, 'bbspoiler_test_button_key' );
     return $buttons;
+}
+
+add_filter('bbp_get_reply_content', 'bb_enable_shortcode', 10,2);
+add_filter('bbp_get_topic_content', 'bb_enable_shortcode', 10,2);
+function bb_enable_shortcode($content) {
+	return do_shortcode($content);
 }
 
 ?>

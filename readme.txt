@@ -1,9 +1,9 @@
 === BBSpoiler ===
 Contributors: flector
-Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers
+Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers,bbpress
 Requires at least: 3.9
 Tested up to: 4.0
-Stable tag: 1.00
+Stable tag: 1.01
 
 This plugin allows you to hide text under the tags [spoiler]your text[/spoiler].
 
@@ -22,7 +22,6 @@ or
 `
 [spoiler title='Title' collapse_link='no']Spoiler content[/spoiler]
 `
-
 
 == Installation ==
 
@@ -67,8 +66,12 @@ The code should look like this:
 2. Sample spoiler.
 3. Sample spoiler with pictures.
 4. Second-level spoilers within a primary spoiler.
+5. Spoiler in bbPress topic.
 
 == Changelog ==
+
+= 1.01 =
+* add support for bbPress
 
 = 1.00 =
 * first version
