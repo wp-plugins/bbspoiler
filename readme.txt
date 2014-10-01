@@ -1,5 +1,6 @@
 === BBSpoiler ===
 Contributors: flector
+Donate link: http://goo.gl/CcxWYg
 Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers,bbpress
 Requires at least: 3.9
 Tested up to: 4.0
@@ -22,6 +23,15 @@ or
 `
 [spoiler title='Title' collapse_link='no']Spoiler content[/spoiler]
 `
+
+If you liked my plugin, please `rate` it.
+
+You may also like my other plugins:
+
+- [Cool Tag Cloud](http://wordpress.org/plugins/cool-tag-cloud/) - A simple, yet very beautiful tag cloud.
+- [Hide My Dates](http://wordpress.org/plugins/hide-my-dates/) - The plugin hides post and comment publishing dates from Google. 
+- [Spam Notifier](http://wordpress.org/plugins/spam-notifier/) - The plugin sends an email message when a comment goes to the spam folder. 
+- [Restore Columns](http://wordpress.org/plugins/restore-columns/) - The plugin restores the possibility to select the number of columns displayed on the dashboard. 
 
 == Installation ==
 
@@ -58,6 +68,10 @@ The code should look like this:
 
 [/spoiler]
 `
+
+= Does the plugin support localization? =
+
+Yes, please send your localization files (.mo и .po) to rlector@gmail.com.
 
 
 == Screenshots ==
