@@ -25,13 +25,7 @@ or
 `
 
 If you liked my plugin, please `rate` it.
-
-You may also like my other plugins:
-
-- [Cool Tag Cloud](http://wordpress.org/plugins/cool-tag-cloud/) - A simple, yet very beautiful tag cloud.
-- [Hide My Dates](http://wordpress.org/plugins/hide-my-dates/) - The plugin hides post and comment publishing dates from Google. 
-- [Spam Notifier](http://wordpress.org/plugins/spam-notifier/) - The plugin sends an email message when a comment goes to the spam folder. 
-- [Restore Columns](http://wordpress.org/plugins/restore-columns/) - The plugin restores the possibility to select the number of columns displayed on the dashboard. 
+ 
 
 == Installation ==
 
