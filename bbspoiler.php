@@ -3,23 +3,24 @@
 Plugin Name: BBSpoiler
 Plugin URI: https://wordpress.org/plugins/bbspoiler/
 Description: This plugin allows you to hide text under the tags [spoiler]your text[/spoiler].
-Version: 1.01
+Version: 2.00
 Author: Flector
 Author URI: https://profiles.wordpress.org/flector#content-plugins
 */ 
 
-function bbspoiler_shortcode( $atts, $content ) {
-	extract( shortcode_atts( array (
+function bbspoiler_shortcode($atts, $content) {
+	extract(shortcode_atts(array(
 		'title' => __('Spoiler', 'bbspoiler'),
 		'state' => 'folded',
+        'style' => 'default',
 		'collapse_link' => 'true'
-	), $atts ) );
+	), $atts));
 
-	$title = esc_attr( $title );
+	$title = esc_attr($title);
 	$head_class = (esc_attr($state) == 'folded')?'':' unfolded';
 	$body_class = (esc_attr($state) == 'folded')?' folded':'';
 
-	$output  = "\n<div class=\"sp-wrap\">\n";
+	$output  = "\n<div class=\"sp-wrap sp-wrap-".$style."\">\n";
 	$output .= "<div class=\"sp-head".$head_class."\" title=\"". __('Expand', 'bbspoiler') ."\">\n";
 	$output .= $title;
 	$output .= "\n</div>\n";
@@ -34,18 +35,19 @@ function bbspoiler_shortcode( $atts, $content ) {
 }
 add_shortcode ('spoiler', 'bbspoiler_shortcode');
 
-function bbspoiler_shortcode2( $atts, $content ) {
-	extract( shortcode_atts( array (
+function bbspoiler_shortcode2($atts, $content) {
+	extract(shortcode_atts(array(
 		'title' => __('Spoiler', 'bbspoiler'),
 		'state' => 'folded',
+        'style' => 'default',
 		'collapse_link' => 'true'
-	), $atts ) );
+	), $atts));
 
-	$title = esc_attr( $title );
+	$title = esc_attr($title);
 	$head_class = (esc_attr($state) == 'folded')?'':' unfolded';
 	$body_class = (esc_attr($state) == 'folded')?' folded':'';
 
-	$output  = "\n<div class=\"sp-wrap\">\n";
+	$output  = "\n<div class=\"sp-wrap sp-wrap-".$style."\">\n";
 	$output .= "<div class=\"sp-head".$head_class."\" title=\"". __('Expand', 'bbspoiler') ."\">\n";
 	$output .= $title;
 	$output .= "\n</div>\n";
@@ -59,7 +61,6 @@ function bbspoiler_shortcode2( $atts, $content ) {
 	return $output;
 }
 add_shortcode ('spoiler2', 'bbspoiler_shortcode2');
-
 
 function bbspoiler_files() {
 	$purl = plugins_url();
@@ -76,6 +77,31 @@ function bbspoiler_files() {
 	wp_localize_script('bbspoiler', 'title', $lang_array);   
 }
 add_action('wp_enqueue_scripts', 'bbspoiler_files');
+
+function bbspoiler_admin_print_scripts() {
+?>
+<script type='text/javascript'>
+var bbbutton = {
+    "title":"<?php _e('Title', 'bbspoiler'); ?>",
+    "spoiler":"<?php _e('Spoiler', 'bbspoiler'); ?>",
+    "text":"<?php _e('Text', 'bbspoiler'); ?>",
+    "showlink":"<?php _e('Show collapse link?', 'bbspoiler'); ?>",
+    "style":"<?php _e('Style', 'bbspoiler'); ?>",
+    "default2":"<?php _e('Default', 'bbspoiler'); ?>",
+    "green":"<?php _e('Green', 'bbspoiler'); ?>",
+    "red":"<?php _e('Red', 'bbspoiler'); ?>",
+    "blue":"<?php _e('Blue', 'bbspoiler'); ?>",
+    "yellow":"<?php _e('Yellow', 'bbspoiler'); ?>",
+    "orange":"<?php _e('Orange', 'bbspoiler'); ?>",
+    "brown":"<?php _e('Brown', 'bbspoiler'); ?>",
+    "purple":"<?php _e('Purple', 'bbspoiler'); ?>",
+    "cyan":"<?php _e('Cyan', 'bbspoiler'); ?>",
+    "lime":"<?php _e('Lime', 'bbspoiler'); ?>",
+    "steelblue":"<?php _e('SteelBlue', 'bbspoiler'); ?>",
+    };
+</script>
+<?php }    
+add_action('admin_head', 'bbspoiler_admin_print_scripts');
 
 function bbspoiler_setup(){
     load_plugin_textdomain('bbspoiler', null, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
@@ -97,28 +123,21 @@ jQuery(document).ready(function($){
 
 function bbspoiler_add_tinymce() {
     global $typenow;
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+    if(!in_array($typenow, array('post', 'page')))
         return ;
-    add_filter( 'mce_external_plugins', 'bbspoiler_add_tinymce_plugin' );
-    add_filter( 'mce_buttons', 'bbspoiler_add_tinymce_button' );
+    add_filter('mce_external_plugins', 'bbspoiler_add_tinymce_plugin');
+    add_filter('mce_buttons', 'bbspoiler_add_tinymce_button');
 }
-add_action( 'admin_head', 'bbspoiler_add_tinymce' );
+add_action('admin_head', 'bbspoiler_add_tinymce');
 
-function bbspoiler_add_tinymce_plugin( $plugin_array ) {
-	$lang = get_locale(); 
-	//just for .po files
-	$temp = __('Title', 'bbspoiler');
-	$temp = __('Spoiler', 'bbspoiler');
-	$temp = __('Text', 'bbspoiler');
-	$temp = __('Show collapse link?', 'bbspoiler');
-	if ($lang != "ru_RU") { $plugin_array['bbspoiler_test'] = plugins_url( '/inc/bbbutton-en_US.js', __FILE__ );}
-	if ($lang == "ru_RU") { $plugin_array['bbspoiler_test'] = plugins_url( '/inc/bbbutton-ru_RU.js', __FILE__ );}
+function bbspoiler_add_tinymce_plugin($plugin_array) {
+	$plugin_array['bbspoiler_button'] = plugins_url('/inc/bbbutton.js', __FILE__);
     return $plugin_array;
 }
 
 // Add the button key for address via JS
-function bbspoiler_add_tinymce_button( $buttons ) {
-    array_push( $buttons, 'bbspoiler_test_button_key' );
+function bbspoiler_add_tinymce_button($buttons) {
+    array_push($buttons, 'bbspoiler_button_button_key');
     return $buttons;
 }
 

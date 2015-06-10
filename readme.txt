@@ -2,7 +2,7 @@
 Contributors: Flector
 Donate link: http://goo.gl/CcxWYg
 Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers,bbpress
-Requires at least: 3.9
+Requires at least: 3.5
 Tested up to: 4.2.2
 Stable tag: trunk
 
@@ -75,8 +75,12 @@ Yes, please send your localization files (.mo и .po) to rlector@gmail.com.
 3. Sample spoiler with pictures.
 4. Second-level spoilers within a primary spoiler.
 5. Spoiler in bbPress topic.
+6. All color styles.
 
 == Changelog ==
+
+= 2.00 =
+* added 10 different color styles
 
 = 1.01 =
 * add support for bbPress
