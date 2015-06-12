@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: BBSpoiler ru_RU\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-17 15:48+0400\n"
-"PO-Revision-Date: 2014-08-17 15:48+0400\n"
+"POT-Creation-Date: 2015-06-10 17:53+0300\n"
+"PO-Revision-Date: 2015-06-10 17:55+0300\n"
 "Last-Translator: Flector <rlector@gmail.com>\n"
 "Language-Team: WordpressPlugins.ru <rlector@gmail.com>\n"
 "Language: ru\n"
@@ -15,38 +15,86 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: Poedit 1.6.7\n"
+"X-Generator: Poedit 1.8\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../bbspoiler.php:13 ../bbspoiler.php:85
+#: ../bbspoiler.php:13 ../bbspoiler.php:40 ../bbspoiler.php:87
 msgid "Spoiler"
 msgstr "Спойлер"
 
-#: ../bbspoiler.php:23 ../bbspoiler.php:48
+#: ../bbspoiler.php:24 ../bbspoiler.php:51 ../bbspoiler.php:76
 msgid "Expand"
 msgstr "Развернуть"
 
-#: ../bbspoiler.php:29
+#: ../bbspoiler.php:30 ../bbspoiler.php:57
 msgid "collapse"
 msgstr "свернуть"
 
-#: ../bbspoiler.php:49
+#: ../bbspoiler.php:77
 msgid "Collapse"
 msgstr "Свернуть"
 
-#: ../bbspoiler.php:84
+#: ../bbspoiler.php:86
 msgid "Title"
 msgstr "Заголовок"
 
-#: ../bbspoiler.php:86
+#: ../bbspoiler.php:88
 msgid "Text"
 msgstr "Текст"
 
-#: ../bbspoiler.php:87
+#: ../bbspoiler.php:89
 msgid "Show collapse link?"
-msgstr "Показать ссылку свернуть?"
+msgstr "Ссылка свернуть?"
+
+#: ../bbspoiler.php:90
+msgid "Style"
+msgstr "Стиль"
+
+#: ../bbspoiler.php:91
+msgid "Default"
+msgstr "По умолчанию"
+
+#: ../bbspoiler.php:92
+msgid "Green"
+msgstr "Зеленый"
+
+#: ../bbspoiler.php:93
+msgid "Red"
+msgstr "Красный"
+
+#: ../bbspoiler.php:94
+msgid "Blue"
+msgstr "Синий"
+
+#: ../bbspoiler.php:95
+msgid "Yellow"
+msgstr "Желтый"
+
+#: ../bbspoiler.php:96
+msgid "Orange"
+msgstr "Оранжевый"
+
+#: ../bbspoiler.php:97
+msgid "Brown"
+msgstr "Коричневый"
+
+#: ../bbspoiler.php:98
+msgid "Purple"
+msgstr "Фиолетовый"
+
+#: ../bbspoiler.php:99
+msgid "Cyan"
+msgstr "Сине-зеленый"
+
+#: ../bbspoiler.php:100
+msgid "Lime"
+msgstr "Ярко-зеленый"
+
+#: ../bbspoiler.php:101
+msgid "SteelBlue"
+msgstr "Стальной голубой"
 
 #~ msgid "Shortcodes"
 #~ msgstr "Шорткоды"
