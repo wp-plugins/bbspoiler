@@ -2,7 +2,7 @@
 Contributors: Flector
 Donate link: http://goo.gl/CcxWYg
 Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers,bbpress
-Requires at least: 3.5
+Requires at least: 3.9
 Tested up to: 4.2.2
 Stable tag: trunk
 
