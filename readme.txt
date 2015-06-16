@@ -1,7 +1,7 @@
 === BBSpoiler ===
 Contributors: Flector
 Donate link: http://goo.gl/CcxWYg
-Tags: box, collapse, expand, hidden, jquery, faq, shortcode, block text, content, content spoiler, spoiler, spoilers,bbpress
+Tags: box, boxes, collapse, expand, hide, hidden, jquery, faq, faqs, shortcode, content, spoiler, spoilers, bbpress, post, posts, admin, animated, animation, plugin, javascript, answers, questions, knowledgebase, shortcodes, colored, color, accordion, accordions, page, pages, collapsible, display, expandable, slider, slide, media
 Requires at least: 3.9
 Tested up to: 4.2.2
 Stable tag: trunk
